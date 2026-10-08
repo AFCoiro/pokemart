@@ -1,0 +1,26 @@
+.footer{
+    background-color: blue;
+    width: 100%;
+}
+.footer-nav{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem 0;
+    .footer-nav_list{
+        display: flex;
+        flex-direction:row;
+        gap: 1rem;
+        li{
+        list-style: none;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+        }
+    }
+    h6{
+        color: white;
+    }
+}

@@ -1,0 +1,67 @@
+[
+  {
+    "id": "potion",
+    "name": "Poción",
+    "category": "Curación",
+    "image": "/img/potion.png",
+    "cost": 300,
+    "effect": "Restaura 20 PS de un Pokémon."
+  },
+  {
+    "id": "poke-ball",
+    "name": "Poké Ball",
+    "category": "Poké Balls",
+    "image": "/img/poke-ball.png",
+    "cost": 200,
+    "effect": "Sirve para atrapar Pokémon salvajes."
+  },
+  {
+    "id": "rare-candy",
+    "name": "Caramelo Raro",
+    "category": "Mejoras",
+    "image": "/img/rare-candy.png",
+    "cost": 4800,
+    "effect": "Sube de nivel a un Pokémon instantáneamente.",
+    "especial": true
+  },
+  {
+  "id": "great-ball",
+  "name": "Súper Ball",
+  "category": "Poké Balls",
+  "image": "/img/great-ball.png",
+  "cost": 600,
+  "effect": "Poké Ball con mayor probabilidad de captura que la estándar."
+},
+{
+  "id": "antidote",
+  "name": "Antídoto",
+  "category": "Curación",
+  "image": "/img/antidote.png",
+  "cost": 100,
+  "effect": "Cura a un Pokémon envenenado."
+},
+{
+  "id": "fire-stone",
+  "name": "Piedra Fuego",
+  "category": "Piedras",
+  "image": "/img/fire-stone.png",
+  "cost": 2100,
+  "effect": "Hace evolucionar a ciertas especies de Pokémon tipo Fuego."
+},
+{
+  "id": "repel",
+  "name": "Repelente",
+  "category": "Campo",
+  "image": "/img/repel.png",
+  "cost": 350,
+  "effect": "Ahuyenta a los Pokémon salvajes débiles durante un tiempo."
+},
+{
+  "id": "ultra-ball",
+  "name": "Ultra Ball",
+  "category": "Poké Balls",
+  "image": "/img/ultra-ball.png",
+  "cost": 1200,
+  "effect": "Poké Ball de alto rendimiento, con mayor tasa de captura que la Súper Ball."
+}
+]

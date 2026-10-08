@@ -1,0 +1,11 @@
+.header{
+    background-color: blue;
+        display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    .brand-cont img{
+        width: 200px;
+    }
+}

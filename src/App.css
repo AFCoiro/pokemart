@@ -1,0 +1,11 @@
+/* index.css — global */
+h1, h2, h3, h4, button {
+  font-family: 'Press Start 2P', monospace;
+}
+
+p, span, li, h5, h6{
+  font-family: 'VT323', monospace;
+}
+a{
+  text-decoration: none;
+}
