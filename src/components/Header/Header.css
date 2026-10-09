@@ -1,10 +1,11 @@
 .header{
-    background-color: blue;
-        display: flex;
+    background-color: #375a3a;
+    display: flex;
     flex-direction:row;
     align-items: center;
     justify-content: space-between;
     padding: 1rem 2rem;
+    font-size: 25px;
     .brand-cont img{
         width: 200px;
     }

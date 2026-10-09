@@ -16,7 +16,7 @@ export const ItemListContainer = ()=>{
             return res.json()
         })
         .then(data=>setProducts(data))
-        .catch((err)=>setErrors(err.menssage))
+        .catch((err)=>setErrors(err.message))
         .finally(()=> setLoading(false))
     },[])
 

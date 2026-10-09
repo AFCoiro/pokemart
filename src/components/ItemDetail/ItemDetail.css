@@ -1,0 +1,8 @@
+.Item-btn{
+    background-color: #9dac9d;
+    color: #2b412f;
+    border: black soilid 2px;
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 3px 5px 5px grey;
+}

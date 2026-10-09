@@ -1,16 +1,30 @@
-# React + Vite
+# Poké Mart
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ecommerce temático de Pokémon con estética Game Boy Color. Una tienda donde se compran los ítems del Poké Mart clásico (Poké Balls, curación, mejoras, piedras de evolución y objetos de campo), hecha con React y Vite.
 
-Currently, two official plugins are available:
+Deploy: https://pokemart-delta.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Sobre este proyecto
 
-## React Compiler
+Esta es la primera entrega del curso de React de Talento Tech. Es una versión base: cumple lo mínimo pedido en la consigna y es el punto de partida de algo más grande.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Voy a seguir actualizando el proyecto, así que el repo y el deploy van a ir cambiando a medida que avance.
 
-## Expanding the ESLint configuration
+## Tecnologías
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+-React
+
+- Vite
+- React Router
+- Sprites de ítems de PokéAPI
+- Tipografías Press Start 2P y VT323 (Google Fonts)
+- Cómo correrlo en local
+- bash
+- npm install
+- npm run dev
+
+Después abrí la dirección que muestra la terminal (normalmente http://localhost:5173).
+
+## Aviso
+
+Proyecto educativo, sin fines de lucro. Pokémon y sus personajes e ítems son marcas de Nintendo, Game Freak y The Pokémon Company. Las imágenes provienen de PokéAPI.
