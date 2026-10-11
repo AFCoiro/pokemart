@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { ItemList } from "../ItemList/ItemList"
+import { Loading } from "../Loading/Loading"
 
 
 export const ItemListContainer = ()=>{
@@ -20,7 +21,7 @@ export const ItemListContainer = ()=>{
         .finally(()=> setLoading(false))
     },[])
 
-    if (loading) {return <p>Cargando...</p>}
+    if (loading) {return <Loading/>}
     if (errors) {return <p>{errors}</p>}
     
     return(

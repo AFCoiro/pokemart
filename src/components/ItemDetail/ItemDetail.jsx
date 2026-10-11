@@ -5,8 +5,9 @@ export const ItemDetail = ({item})=>{
     return(
         <>
         <Item {...item}>
-            <button className="Item-btn">Agregar al Carrito</button>
-        </Item>
+                    <p><span>Descripción:</span> {item.effect}</p>
+                    <button className="Item-btn">Agregar al Carrito</button>
+            </Item>
         </>
     )
 }

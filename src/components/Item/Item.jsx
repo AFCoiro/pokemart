@@ -16,7 +16,7 @@ export const Item = ({name,category,image,cost,effect,children})=>{
                 <img src={image} alt={name} />
             </div>
 
-            <p><span>Descripción:</span> {effect}</p>
+            
 
             <footer className="item-cont">
                 
