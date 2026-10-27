@@ -11,4 +11,14 @@
         text-decoration: none;
         color: white;
     }
+    .cart-num{
+        border-radius: 0 4px 4px;
+        background-color: red;
+        color: white;
+        padding: 0 6px;
+        font-size: 20px;
+        position: absolute;
+        top: 44px;
+        right: 23px;
+    }
 }
