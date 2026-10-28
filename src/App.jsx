@@ -5,6 +5,7 @@ import { Header } from './components/Header/Header';
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
 import { Home } from './pages/Home';
+import { CartView } from './components/Cart/CartView';
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="/:products" element={<><h1>POKE-MART PRODUCTS</h1> <ItemListContainer/></>}/>
-      <Route path="/cart" element={<h1>POKE-MART CART SHOP</h1>}/>
+      <Route path="/cart" element={<CartView />}/>
       <Route path="/products/:id" element={<><h1>POKE-MART PRODUCTS</h1> <ItemDetailContainer/></>}/>
     </Routes>
     <Footer/>
