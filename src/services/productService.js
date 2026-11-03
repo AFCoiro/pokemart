@@ -1,0 +1,19 @@
+import { collection, getDocs } from 'firebase/firestore'
+import { db } from '../firebase/config'
+
+const productRef = collection(db,'products')
+
+export const getProducts = async ()=>{
+
+    try {
+        const snapshot = await getDocs(productRef)
+
+        const productsFormat = snapshot.docs.map((doc) => {
+            return { id: doc.id, ...doc.data() }
+        });
+        return productsFormat
+    } catch (error) {
+        console.error('error al traer productos',error);
+        throw error;
+    }
+}
