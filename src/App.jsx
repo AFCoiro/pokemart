@@ -18,6 +18,7 @@ function App() {
       <Route path="/:products" element={<><h1>POKE-MART PRODUCTS</h1> <ItemListContainer/></>}/>
       <Route path="/cart" element={<CartView />}/>
       <Route path="/products/:id" element={<><h1>POKE-MART PRODUCTS</h1> <ItemDetailContainer/></>}/>
+      <Route path="/:category/:category" element={<><h1>POKE-MART CATEGORY</h1> <ItemListContainer/></>}/>
     </Routes>
     <Footer/>
     </>

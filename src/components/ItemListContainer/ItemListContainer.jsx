@@ -1,20 +1,22 @@
 import { useEffect, useState } from "react"
 import { ItemList } from "../ItemList/ItemList"
 import { Loading } from "../Loading/Loading"
-import { getProducts } from "../../services/productService"
+import { getByCategory } from "../../services/productService"
+import { useParams } from "react-router-dom"
 
 
 export const ItemListContainer = ()=>{
+    const { category } = useParams()
     const [products, setProducts] =useState([])
     const [errors, setErrors] =useState(null)
     const [loading, setLoading] =useState(true)
 
     useEffect(()=>{
-       getProducts()
+       getByCategory(category)
         .then(data=>setProducts(data))
         .catch((err)=>setErrors(err.message))
         .finally(()=> setLoading(false))
-    },[])
+    },[category])
 
     if (loading) {return <Loading/>}
     if (errors) {return <p>{errors}</p>}
