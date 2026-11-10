@@ -1,8 +1,8 @@
 import "./Nav.css";
 import { Link } from "react-router-dom";
-import { ShoppingCart,ShoppingBag } from 'pixelarticons/react'
+import { ShoppingBag } from 'pixelarticons/react'
 import { useCart } from "../../context/CartContext";
-
+/*import { ShoppingCart,ShoppingBag } from 'pixelarticons/react'*/
 
 
 export const Nav = ()=>{
@@ -19,6 +19,9 @@ export const Nav = ()=>{
                         <Link to={"/products"} className="nav-list_link">Productos</Link>
                     </li>
                     <li>
+                        <Link to={"/category/batalla"}>Batalla</Link>
+                    </li>
+                    <li>
                         <Link to={"/cart"} className="nav-list_link">
                             <ShoppingBag/>
                             {totalItems > 0 && <span className="cart-num">{totalItems}</span>}
@@ -28,3 +31,6 @@ export const Nav = ()=>{
             </nav>
     )
 }
+/* -------------------------------------------------------------------------- */
+/* que el selected sea una flechita abajo o algo tipo gameboy cuando esta en el item. quizas que el nav sean botones como el logo de la tienda                                      .                                     */
+/* -------------------------------------------------------------------------- */

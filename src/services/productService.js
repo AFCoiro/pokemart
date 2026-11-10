@@ -1,7 +1,9 @@
-import { collection,doc,getDoc, getDocs, query, where } from 'firebase/firestore'
+import { addDoc, collection,doc,getDoc, getDocs, query, where } from 'firebase/firestore'
 import { db } from '../firebase/config'
 
 const productsRef = collection(db,'products')
+
+
 
 /* -------------------------------------------------------------------------- */
 /*                          TRAER TODOS LOS PRODUCTOS                         */
@@ -22,7 +24,7 @@ export const getProducts = async ()=>{
     }
 }
 /* -------------------------------------------------------------------------- */
-/*                           TRAER DE A UN PRODUCTO                           */
+/*                           TRAER DE A UN PRODUCTO POR ID                    */
 /* -------------------------------------------------------------------------- */
 export const getProductById = async (id)=>{
     try {
@@ -46,7 +48,7 @@ export const getProductById = async (id)=>{
 
 
 /* -------------------------------------------------------------------------- */
-/*                               TRAER CATEGORIA                              */
+/*                               TRAER CATEGORIA DE PRODUCTOS                 */
 /* -------------------------------------------------------------------------- */
  export const getByCategory = async (category)=>{
     try {
@@ -66,4 +68,26 @@ export const getProductById = async (id)=>{
                 console.error('Error al traer productos filtrados:',error);
         throw error;
     }
+ }
+
+
+ /* -------------------------------------------------------------------------- */
+ /*                      *-------ALTA DE PRODUCTO-------*                      */
+ /* -------------------------------------------------------------------------- */
+
+ export const createProduct = async (product)=>{
+
+    try {
+        const docRef = await addDoc(productsRef,product)
+        
+        return {
+            id:docRef.id,
+            name:product.name
+        }
+
+    } catch (error) {
+         console.error('Error al crear producto:',error);
+        throw error;
+    }
+
  }
