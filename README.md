@@ -10,6 +10,10 @@ Esta es la primera entrega del curso de React de Talento Tech. Es una versión b
 
 Voy a seguir actualizando el proyecto, así que el repo y el deploy van a ir cambiando a medida que avance.
 
+## Admin
+
+Hay un usuario y contraseña de administrador para poder acceder al perfil del mismo y realizar acciones en el CRUD. Solicitala en caso de ser necesario.
+
 ## Tecnologías
 
 -React
