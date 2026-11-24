@@ -8,8 +8,9 @@ import { ProductFormContainer } from './components/adminComponents/ProductForm/P
 import { ProductSuccess } from './components/adminComponents/ProductSuccess';
 import { PublicLayout } from './layouts/PublicLayout';
 import { AdminLayout } from './layouts/AdminLayout';
-import { Login } from 'pixelarticons/react';
+import { Login } from './components/Login/Login';
 import { ProtectedRoute } from './components/ProtectedRoute/ProtectedRoute';
+import { Dashboard } from './components/adminComponents/Dashboard/Dashboard';
 
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
             <Route path="/category/:category" element={<><h1>POKE-MART CATEGORY</h1> <ItemListContainer/></>}/>
         </Route> 
 
-        <Route path='/admin/login' element={<Login/>}/>
+            <Route path="/admin/login" element={<Login/>}/>
 
         {/*ADMIN*/}
         <Route 
@@ -36,7 +37,8 @@ function App() {
               <AdminLayout/>
             </ProtectedRoute>
             }>
-
+            <Route index element={<><h1>ADMIN</h1> <ProductFormContainer/></>}/>
+            <Route path="dashboard" element={ <Dashboard/>}/>
             <Route path="products/new" element={<><h1>ADMIN</h1> <ProductFormContainer/></>}/>
             <Route path="products/success/:id/:name" element={<><h1>NEW PRODUCT</h1> <ProductSuccess/></>}/>
             

@@ -1,9 +1,11 @@
 import { onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { createContext, useContext, useEffect, useState } from "react";
 import { auth } from "../firebase/config";
+import { useNavigate } from "react-router-dom";
 
 const AuthContext = createContext();
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useAuth = ()=>{
     const context = useContext (AuthContext);
 
@@ -16,6 +18,7 @@ export const useAuth = ()=>{
 export const AuthProvider = ({children})=>{
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
+    const navigate = useNavigate();
 
     useEffect(()=>{
         const unsuscribe = onAuthStateChanged(auth, (fbUser)=>{
@@ -26,11 +29,12 @@ export const AuthProvider = ({children})=>{
     },[]) 
 
     const login = (email, password)=>{
-        return signInWithEmailAndPassword (email, password);
+        return signInWithEmailAndPassword (auth,email, password);
     }
 
     const logout = async ()=>{
         try{
+            navigate("/", {replace: true});
             await signOut(auth);
         }
         catch(error){
